@@ -1,0 +1,10 @@
+.nuxt/
+node_modules/
+.output/
+.vercel/
+dist/
+coverage/
+public/
+*.log
+/lib/**
+/components/ui/**
