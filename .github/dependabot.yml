@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
+    groups:
+      nuxt:
+        patterns:
+          - "@nuxt/*"
+          - "nuxt"
+      tailwindcss:
+        patterns:
+          - "@tailwindcss/*"
+          - "tailwindcss"
+      eslint:
+        patterns:
+          - "eslint*"
+          - "@nuxt/eslint"
+      prettier:
+        patterns:
+          - "prettier*"
+      vue:
+        patterns:
+          - "vue*"
+    ignore:
+      - dependency-name: "nuxt"
+        update-types: ["version-update:semver-major"]
+
